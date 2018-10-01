@@ -1,0 +1,36 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>HLX Reader</title>
+	<base href="/">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+</head>
+<body>
+	<header class="container bg-dark text-white p-2">
+		<h1 class="text-center">HLX Reader</h1>
+	</header>
+
+	<main class="container">
+		<form enctype="multipart/form-data" method="post" class="row bg-secondary p-3">
+			<div class="input-group">
+				<div class="custom-file">
+					<input type="file" class="custom-file-input" id="hlxFile" aria-describedby="btnLoadFile">
+					<label class="custom-file-label" for="hlxFile">Choose file</label>
+				</div>
+				<div class="input-group-append">
+					<button class="btn btn-primary" type="button" id="btnLoadFile" onclick="LoadFile();">Load File</button>
+				</div>
+			</div>
+		</form>
+
+		<ul id="root"></ul>
+	</main>
+
+	<footer></footer>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
