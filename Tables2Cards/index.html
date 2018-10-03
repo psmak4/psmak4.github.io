@@ -1,0 +1,199 @@
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Tables 2 Cards</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark mb-3">
+		<h1 class="navbar-brand">Tables 2 Cards</h1>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarsExampleDefault">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item active">
+					<a class="nav-link" href="/">Home</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<main class="container">
+		<div class="text-right mb-3">
+			<button class="btn btn-primary" onclick="ToggleT2C();">Toggle</button>
+		</div>
+
+		<div id="TableContainer" class="t2c">
+			<table class="table">
+				<thead>
+					<tr>
+						<th>
+							<span>Category</span>
+						</th>
+						<th>
+							<span>Project Name</span>
+						</th>
+						<th>
+							<span>Task</span>
+						</th>
+						<th>
+							<span>Resource Name</span>
+						</th>
+						<th>
+							<span>Week</span>
+						</th>
+						<th>
+							<span>Priority</span>
+						</th>
+						<th>
+							<span>Forecast Hours</span>
+						</th>
+						<th>
+							<span>Actual Hours</span>
+						</th>
+						<th>
+							<span>Last Update</span>
+						</th>
+						<th>
+							<span>Updated By</span>
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Routing Request</td>
+						<td>Test documentation reminder - Scoping</td>
+						<td>6526</td>
+						<td>Wessels, Nancy</td>
+						<td>09/03/2018</td>
+						<td>Medium</td>
+						<td>1</td>
+						<td>0</td>
+						<td>09/05/2018</td>
+						<td>CABLE\nwesse200</td>
+					</tr>
+					<tr>
+						<td>BAU</td>
+						<td>Meetings/Administration</td>
+						<td>&nbsp;</td>
+						<td>Koele, Mike</td>
+						<td>09/03/2018</td>
+						<td>Medium</td>
+						<td>10</td>
+						<td>&nbsp;</td>
+						<td>05/24/2018</td>
+						<td>CABLE\mkoele200</td>
+					</tr>
+					<tr>
+						<td>BAU</td>
+						<td>Meetings</td>
+						<td>&nbsp;</td>
+						<td>Koele, Mike</td>
+						<td>09/03/2018</td>
+						<td>Medium</td>
+						<td>10</td>
+						<td>&nbsp;</td>
+						<td>03/22/2018</td>
+						<td>CABLE\mkoele200</td>
+					</tr>
+					<tr>
+						<td>BAU</td>
+						<td>Layer X Dashboarding</td>
+						<td>&nbsp;</td>
+						<td>Koele, Mike</td>
+						<td>09/03/2018</td>
+						<td>High</td>
+						<td>8</td>
+						<td>&nbsp;</td>
+						<td>06/27/2018</td>
+						<td>CABLE\mkoele200</td>
+					</tr>
+					<tr>
+						<td>BAU</td>
+						<td>Meetings/Administration</td>
+						<td>&nbsp;</td>
+						<td>Koele, Mike</td>
+						<td>09/10/2018</td>
+						<td>Medium</td>
+						<td>10</td>
+						<td>&nbsp;</td>
+						<td>05/24/2018</td>
+						<td>CABLE\mkoele200</td>
+					</tr>
+					<tr>
+						<td>BAU</td>
+						<td>Layer X Dashboarding</td>
+						<td>&nbsp;</td>
+						<td>Koele, Mike</td>
+						<td>09/10/2018</td>
+						<td>High</td>
+						<td>8</td>
+						<td>&nbsp;</td>
+						<td>06/27/2018</td>
+						<td>CABLE\mkoele200</td>
+					</tr>
+					<tr>
+						<td>Routing Request</td>
+						<td>test - In Process</td>
+						<td>6498</td>
+						<td>Carr, Daena</td>
+						<td>09/10/2018</td>
+						<td>Medium</td>
+						<td>8</td>
+						<td>0</td>
+						<td>08/22/2018</td>
+						<td>CABLE\rcaden200</td>
+					</tr>
+					<tr>
+						<td>Routing Request</td>
+						<td>test - In Process</td>
+						<td>6498</td>
+						<td>Carr, Daena</td>
+						<td>09/10/2018</td>
+						<td>Medium</td>
+						<td>8</td>
+						<td>0</td>
+						<td>08/22/2018</td>
+						<td>CABLE\rcaden200</td>
+					</tr>
+					<tr>
+						<td>BAU</td>
+						<td>Meetings</td>
+						<td>&nbsp;</td>
+						<td>Koele, Mike</td>
+						<td>09/10/2018</td>
+						<td>Medium</td>
+						<td>10</td>
+						<td>&nbsp;</td>
+						<td>03/22/2018</td>
+						<td>CABLE\mkoele200</td>
+					</tr>
+					<tr>
+						<td>Routing Request</td>
+						<td>test - In Process</td>
+						<td>6498</td>
+						<td>Carr, Daena</td>
+						<td>09/17/2018</td>
+						<td>Medium</td>
+						<td>8</td>
+						<td>0</td>
+						<td>08/22/2018</td>
+						<td>CABLE\rcaden200</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</main>
+
+	<footer></footer>
+
+	<script src="js/main.js"></script>
+</body>
+
+</html>
