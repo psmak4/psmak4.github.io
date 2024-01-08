@@ -1,0 +1,18 @@
+---
+interface Props {
+	id: string
+	backgroundColor: 'red' | 'orange' | 'yellow' | 'green' | 'blue' | 'purple' | 'white' | 'black'
+}
+
+const { id, backgroundColor } = Astro.props;
+---
+
+<section id={id} class="section">
+	<slot />
+</section>
+
+<style define:vars={{ backgroundColor }}>
+	.section {
+		background-color: var(--backgroundColor);
+	}
+</style>

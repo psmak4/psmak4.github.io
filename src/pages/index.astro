@@ -1,9 +1,20 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import Section from '../components/Section.astro';
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-	</main>
+<Layout title="Preston Jones">
+	<Section id="home" backgroundColor='red'>
+		Home section
+	</Section>
+	<Section id="about" backgroundColor='orange'>
+		About section
+	</Section>
+	<Section id="resume" backgroundColor='yellow'>
+		Resume section
+	</Section>
+	<Section id="contact" backgroundColor='green'>
+		Contact section
+	</Section>
 </Layout>

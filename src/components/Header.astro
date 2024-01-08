@@ -1,0 +1,121 @@
+---
+---
+
+<div class="header">
+	<header class="logo">
+		<a class="logo__link" href="/">Preston Jones</a>
+	</header>
+	<button id="toggle-nav-button" class="nav-toggle" type="button" aria-controls="navigation" aria-expanded="false">
+		<i id="icon" class="fa-solid fa-burger"></i>
+	</button>
+	<nav id="navigation" class="navigation">
+		<a class="navigation__link" href="/#home">Home</a>
+		<a class="navigation__link" href="/#about">About</a>
+		<a class="navigation__link" href="/#resume">Resume</a>
+		<a class="navigation__link" href="/#contact">Contact</a>
+	</nav>
+</div>
+
+<style>
+	.header {
+		position: sticky;
+		top: 0;
+		display: flex;
+		background-color: #fff;
+	}
+
+	.logo {
+		height: 3rem;
+		margin-right: auto;
+		padding-left: 1rem;
+		padding-right: 1rem;
+		font-size: 1.25rem;
+		line-height: 3rem;
+	}
+
+	.logo__link {
+		text-decoration: none;
+	}
+
+	.nav-toggle {
+		width: 3rem;
+		height: 3rem;
+		margin: 0;
+		padding: 0;
+		background-color: transparent;
+		border: none;
+		color: #333;
+		cursor: pointer;
+		font-size: 1.25rem;
+	}
+
+	.nav-toggle:hover {
+		background-color: #efefef;
+	}
+
+	.navigation {
+		display: none;
+		opacity: 0;
+		transition: opacity 3s ease-in;
+	}
+
+	.navigation--visible {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		gap: 1rem;
+		position: absolute;
+		top: 100%;
+		right: 0;
+		left: 0;
+		height: calc(100vh - 3rem);
+		background-color: #fff;
+		opacity: 1;
+	}
+
+	.navigation__link {
+		text-decoration: none;
+	}
+
+	@media (min-width: 38rem) {
+		.nav-toggle {
+			display: none;
+		}
+
+		.navigation, .navigation--visible {
+			display: flex;
+			padding: 0 1rem;
+			opacity: 1;
+			justify-content: center;
+			align-items: center;
+			flex-direction: row;
+			gap: 1rem;
+			position: relative;
+			top: auto;
+			right: auto;
+			left: auto;
+			height: 3rem;
+		}
+	}
+</style>
+
+<script>
+	function toggleNav() {
+		const button = document.getElementById('toggle-nav-button')
+		const icon = button?.querySelector('#icon')
+		icon?.classList.toggle('fa-times')
+		icon?.classList.toggle('fa-burger')
+		const navigation = document.querySelector('#navigation')
+		navigation?.classList.toggle('navigation--visible')
+		button?.setAttribute('aria-expanded', button.getAttribute('aria-expanded') === 'true' ? 'false' : 'true')
+	}
+
+	const button = document.getElementById('toggle-nav-button')
+	button?.addEventListener('click', toggleNav)
+
+	const navLinks = document.querySelectorAll('.navigation__link')
+	navLinks.forEach((link) => {
+		link.addEventListener('click', toggleNav)
+	})
+</script>
