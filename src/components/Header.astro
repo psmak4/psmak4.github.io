@@ -9,17 +9,31 @@
 		<i id="icon" class="fa-solid fa-burger"></i>
 	</button>
 	<nav id="navigation" class="navigation">
-		<a class="navigation__link" href="/#home">Home</a>
-		<a class="navigation__link" href="/#about">About</a>
-		<a class="navigation__link" href="/#resume">Resume</a>
-		<a class="navigation__link" href="/#contact">Contact</a>
+		<a class="navigation__link" data-target='home' onclick="setSelected('home')" href="/#home">Home</a>
+		<a class="navigation__link" data-target='about' onclick="setSelected('about')" href="/#about">About</a>
+		<a class="navigation__link" data-target='resume' onclick="setSelected('resume')" href="/#resume">Resume</a>
+		<a class="navigation__link" data-target='contact' onclick="setSelected('contact')" href="/#contact">Contact</a>
 	</nav>
 </div>
 
+<script is:inline>
+	const setSelected = (value) => {
+		const links = document.querySelectorAll('nav a.navigation__link')
+		links.forEach(l => l.classList.remove('selected'))
+		
+		const link = document.querySelector(`nav a.navigation__link[data-target="${value}"]`)
+		link.classList.add('selected')
+	}
+
+	setSelected('home')
+</script>
+
 <style>
 	.header {
-		position: sticky;
+		position: fixed;
 		top: 0;
+		left: 0;
+		right: 0;
 		display: flex;
 		background-color: #fff;
 	}
@@ -30,6 +44,7 @@
 		padding-left: 1rem;
 		padding-right: 1rem;
 		font-size: 1.25rem;
+		font-weight: 600;
 		line-height: 3rem;
 	}
 
@@ -76,6 +91,10 @@
 
 	.navigation__link {
 		text-decoration: none;
+
+		&.selected {
+			font-weight: 600;
+		}
 	}
 
 	@media (min-width: 38rem) {
