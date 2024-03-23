@@ -4,7 +4,7 @@ interface Props {
 	backgroundColor: 'blue1' | 'blue2' | 'blue3' | 'blue4'
 }
 
-const { id, backgroundColor } = Astro.props;
+const { id, backgroundColor } = Astro.props
 
 const getBackgroundColor = () => {
 	switch (backgroundColor) {
@@ -20,7 +20,7 @@ const getBackgroundColor = () => {
 }
 ---
 
-<section id={id} class="section">
+<section id={id} class='section'>
 	<slot />
 </section>
 

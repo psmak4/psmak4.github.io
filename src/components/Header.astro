@@ -1,26 +1,27 @@
 ---
+
 ---
 
-<div class="header">
-	<header class="logo">
-		<a class="logo__link" href="/">Preston Jones</a>
+<div class='header'>
+	<header class='logo'>
+		<a class='logo__link' href='/'>Preston Jones</a>
 	</header>
-	<button id="toggle-nav-button" class="nav-toggle" type="button" aria-controls="navigation" aria-expanded="false">
-		<i id="icon" class="fa-solid fa-burger"></i>
+	<button id='toggle-nav-button' class='nav-toggle' type='button' aria-controls='navigation' aria-expanded='false'>
+		<i id='icon' class='fa-solid fa-burger'></i>
 	</button>
-	<nav id="navigation" class="navigation">
-		<a class="navigation__link" data-target='home' onclick="setSelected('home')" href="/#home">Home</a>
-		<a class="navigation__link" data-target='about' onclick="setSelected('about')" href="/#about">About</a>
-		<a class="navigation__link" data-target='resume' onclick="setSelected('resume')" href="/#resume">Resume</a>
-		<a class="navigation__link" data-target='contact' onclick="setSelected('contact')" href="/#contact">Contact</a>
+	<nav id='navigation' class='navigation'>
+		<a class='navigation__link' href='/#home'>Home</a>
+		<a class='navigation__link' href='/#about'>About</a>
+		<a class='navigation__link' href='/#resume'>Resume</a>
+		<a class='navigation__link' href='/#contact'>Contact</a>
 	</nav>
 </div>
 
 <script is:inline>
-	const setSelected = (value) => {
+	const setSelected = value => {
 		const links = document.querySelectorAll('nav a.navigation__link')
 		links.forEach(l => l.classList.remove('selected'))
-		
+
 		const link = document.querySelector(`nav a.navigation__link[data-target="${value}"]`)
 		link.classList.add('selected')
 	}
@@ -35,7 +36,11 @@
 		left: 0;
 		right: 0;
 		display: flex;
-		background-color: #fff;
+		background-color: #4d6a6d;
+	}
+
+	.header a {
+		color: #fff;
 	}
 
 	.logo {
@@ -59,13 +64,13 @@
 		padding: 0;
 		background-color: transparent;
 		border: none;
-		color: #333;
+		color: #fff;
 		cursor: pointer;
 		font-size: 1.25rem;
 	}
 
 	.nav-toggle:hover {
-		background-color: #efefef;
+		background-color: #4d6a6d;
 	}
 
 	.navigation {
@@ -85,7 +90,7 @@
 		right: 0;
 		left: 0;
 		height: calc(100vh - 3rem);
-		background-color: #fff;
+		background-color: #4d6a6d;
 		opacity: 1;
 	}
 
@@ -102,7 +107,8 @@
 			display: none;
 		}
 
-		.navigation, .navigation--visible {
+		.navigation,
+		.navigation--visible {
 			display: flex;
 			padding: 0 1rem;
 			opacity: 1;
@@ -134,7 +140,7 @@
 	button?.addEventListener('click', toggleNav)
 
 	const navLinks = document.querySelectorAll('.navigation__link')
-	navLinks.forEach((link) => {
+	navLinks.forEach(link => {
 		link.addEventListener('click', toggleNav)
 	})
 </script>
